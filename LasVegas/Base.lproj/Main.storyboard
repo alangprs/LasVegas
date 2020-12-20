@@ -124,6 +124,60 @@
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pBb-pw-Pvq"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="下注金額" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPl-Am-ojG">
+                                <rect key="frame" x="74" y="246" width="86" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="餘額" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcD-cP-jY1">
+                                <rect key="frame" x="174" y="246" width="86" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="下注金額" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lON-tr-tUM">
+                                <rect key="frame" x="665" y="246" width="86" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="餘額" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgA-2e-zlv">
+                                <rect key="frame" x="768" y="246" width="86" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ptd-2A-Cv9">
+                                <rect key="frame" x="69" y="313" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkc-2b-ERn">
+                                <rect key="frame" x="183" y="313" width="68" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aQd-o1-ZUP">
+                                <rect key="frame" x="660" y="313" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFa-4G-nbX">
+                                <rect key="frame" x="786" y="313" width="68" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.95095777562953621" blue="0.70077161680252997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -134,13 +188,17 @@
                         <outlet property="leftDice3" destination="cq1-u3-Gc1" id="ul0-Md-EMI"/>
                         <outlet property="leftDice4" destination="Eky-qO-rWr" id="QKT-LL-dvl"/>
                         <outlet property="leftDice5" destination="c1X-AQ-bgg" id="5go-Tl-Nlr"/>
+                        <outlet property="leftMoney" destination="Qkc-2b-ERn" id="9zT-ts-rtl"/>
                         <outlet property="leftPoint" destination="sVa-SA-sTx" id="nzt-Nt-LvL"/>
+                        <outlet property="leftTextField" destination="ptd-2A-Cv9" id="pxt-sD-kDH"/>
                         <outlet property="rightDice1" destination="Ga8-fL-hLz" id="77B-sb-mvV"/>
                         <outlet property="rightDice2" destination="z9T-bl-ax7" id="m6v-Sb-6z5"/>
                         <outlet property="rightDice3" destination="Xik-19-znE" id="Hx2-F5-MVg"/>
                         <outlet property="rightDice4" destination="0GH-Ht-hL2" id="ePu-YJ-zVw"/>
                         <outlet property="rightDice5" destination="shc-ZA-H8j" id="4et-Vu-nEq"/>
+                        <outlet property="rightMoney" destination="XFa-4G-nbX" id="1d9-V1-XkY"/>
                         <outlet property="rightPoint" destination="yTN-8s-OIX" id="IiH-9d-i4h"/>
+                        <outlet property="rightTextField" destination="aQd-o1-ZUP" id="gSB-D7-sgT"/>
                         <outlet property="showLabel" destination="IDe-Sw-LbV" id="uyA-0q-I96"/>
                     </connections>
                 </viewController>

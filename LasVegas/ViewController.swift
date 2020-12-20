@@ -21,10 +21,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var rightDice3: UIImageView!
     @IBOutlet weak var rightDice4: UIImageView!
     @IBOutlet weak var rightDice5: UIImageView!
-    
-    
-    
-    
+    //左邊下注金額
+    @IBOutlet weak var leftTextField: UITextField!
+    //右邊下注金額
+    @IBOutlet weak var rightTextField: UITextField!
+    //左邊餘額
+    @IBOutlet weak var leftMoney: UILabel!
+    //右邊餘額
+    @IBOutlet weak var rightMoney: UILabel!
     
     
     //宣告左右邊點數給@IBAction func startButton 使用
@@ -32,12 +36,20 @@ class ViewController: UIViewController {
     var rightSum = 0 //右亂數值
     var lefImage = ["l1","l2","l3","l4","l5","l6"]
     var rightImage = ["r1","r2","r3","r4","r5","r6",]
-    
+    //餘額顯示
+    var leftLast = 1000
+    var rightLast = 1000
+    //左邊投注金額
+    var leftBidMoney = ""
+    //右邊投注金額
+    var rightBidMoney = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    
 //開始按鈕
     @IBAction func startButton(_ sender: Any) {
         //出現左邊點數
@@ -47,15 +59,36 @@ class ViewController: UIViewController {
         rightSum = Int.random(in: 5...30)
         rightPoint.text = String("\(rightSum)")
         
-        //更改比較後顯示label
+        //在開始後，讀左右邊 投注金額 、 餘額扣掉投注金額
+        let leftBidMoney = Int(leftTextField.text!)
+                leftLast = leftLast - leftBidMoney!
+                leftMoney.text = String(leftLast)
+        let rightBidMoney = Int(rightTextField.text!)
+                rightLast = rightLast - rightBidMoney!
+                rightMoney.text = String(rightLast)
+    
+        //讀出賭資，判斷誰贏（連動投注金額，顯示輸或贏之後餘額）
         if lefSum > rightSum{
+            let leftBidMoney = Int(leftTextField.text!)
+            leftLast = leftLast + leftBidMoney! + leftBidMoney!
+            leftMoney.text = String(leftLast)
             showLabel.text = String("🎇此局由 『隔壁老王』 獲勝🎇")
         }
         else if lefSum < rightSum{
+            let rightBidMoney = Int(rightTextField.text!)
+            rightLast = rightLast + rightBidMoney! + rightBidMoney!
+            rightMoney.text = String(rightLast)
             showLabel.text = String("🎇此局由 『8號乾妹』 獲勝🎇")
+            
         }
         else if lefSum == rightSum{
-            showLabel.text = String("🎇平手再來一次🎇")
+            let leftBidMoney = Int(leftTextField.text!)
+            leftLast = leftLast - (leftBidMoney! + leftBidMoney!)
+            leftMoney.text = String(leftLast)
+            let rightBidMoney = Int(rightTextField.text!)
+            rightLast = rightLast - (rightBidMoney! + rightBidMoney!)
+            rightMoney.text = String(rightLast)
+            showLabel.text = String("🎇『和局』莊家通殺🎇")
         }
         //更改左邊骰子與亂數值相同照片
         if lefSum == 5{
@@ -423,8 +456,9 @@ class ViewController: UIViewController {
             rightDice4.image = UIImage(named: String(rightImage[5]))
             rightDice5.image = UIImage(named: String(rightImage[5]))
         }
-        
+
     }
+    
     
 }
 
